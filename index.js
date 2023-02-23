@@ -6,6 +6,7 @@ const { userRouter} = require("./Routes/UserRouter");
 const { flightRouter } = require("./Routes/FlightRouter");
 const { bookingRouter } = require("./Routes/BookingRouter");
 const { BookingModel } = require("./Models/BookingModel");
+const { UserModel } = require("./Models/UserModel");
 const app = express();
 app.use(express.json());
 app.use(cors({
@@ -19,7 +20,7 @@ app.use("/booking",bookingRouter);
 
 app.get("/dashboard",async(req,res)=>{
     try {
-        const data = await BookingModel.find();
+        const data = await BookingModel.find().populate(["user","flight"]);
         res.status(201).send(data)
     } catch (error) {
         res.status(400).send("something went wrong")
