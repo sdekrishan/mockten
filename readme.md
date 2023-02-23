@@ -18,13 +18,13 @@ This api allows us to register and login
 If you want to register then :- 
 
 ### Register a user
- https://determined-smock-crow.cyclic.app/register
+ /register
 you need to give your name,email and password for register. (method : POST)
 
 ### Login a user
-https://determined-smock-crow.cyclic.app/login
-
-You need to give your email and password for loggin (method : POST)
+ 
+ /login
+ you need to pass your email and password in body for loggin (method : POST)
 
 ## Flight section (/flights)
 
@@ -57,3 +57,5 @@ use /flights/:id route to delete any flight by their id. (method : DELETE)
 ### Dashboard (/dashboard)
 
 Here you can see all the flights who has been booked with all data related to user and flight (method : GET)
+
+I hope you like the documentation and thank you for reading till now :)
