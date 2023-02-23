@@ -56,12 +56,14 @@ If you do all things correctly you will get single data as object;
 ### post a flight (create a flight);
 
 use /flights for creating a new flight. (method : POST) {airline,flightNo,departure,arrival,departureTime,arrivalTime,seats,price} pass them in body
+
 responses :- if you do something wrong then you will get  "something went wrong with error message"
 if you do all things correctly then you will get {{message:"flight created successfully",flight:new flight data}}
 
 ### Update a flight
 
 use /flights/:id route to update, pass your id after flights and send the data by passing in body (method : PATCH)
+
 responses:- if you do something wrong then you will get  "something went wrong with error message"
 if you want to update some invalid flights i.e. id is not there then you will get "flight not found with id"
 if you do all things correctly then you will get "flight has been updated"
@@ -69,6 +71,7 @@ if you do all things correctly then you will get "flight has been updated"
 ### Delete a Flight
 
 use /flights/:id route to delete any flight by their id. (method : DELETE)
+
 responses:- if you do something wrong then you will get  "something went wrong with error message"
 if you want to delete invalid flights i.e. id is not there then you will get "flight not found with id"
 if you do all things correctly then you will get "flight has been deleted"
@@ -78,13 +81,15 @@ if you do all things correctly then you will get "flight has been deleted"
 ### for booking a flight (/booking)
 
  /booking for book a flight. you have to pass the userId and flightId in body. Then you can book any flight (method : POST)
- responses :- if you do something wrong then you will get  "something went wrong "
+
+responses :- if you do something wrong then you will get  "something went wrong "
 if you do all things correctly then you will get "book successfully
 
 
 ### Dashboard (/dashboard)
 
 Here you can see all the flights who has been booked with all data related to user and flight (method : GET)
+
 responses :- if you do something wrong then you will get  "something went wrong "
 if you do all things correctly then you will get data as an array of objects
 
